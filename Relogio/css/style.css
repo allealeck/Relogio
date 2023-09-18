@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: clock;
+    src: url('/fonts/alarm.ttf');
+}
+
+body{
+    background: linear-gradient(rgba(255,81,0,0.479),darkblue);
+    height: 100vh;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+.relogio{
+    width: 550px;
+    height: 200px;
+    background: white;
+    border-radius: 7px;
+    box-shadow: 5px 5px 13px rgba(0, 0, 0, 0.716);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.relogio div{
+    height: 170px;
+    width: 150px;
+    background: black;
+    color: white;
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.diaMesAno{
+    position: absolute;
+    top: 30px;
+    padding: 0 200px;
+}
+.diaMesAno p{
+    font-size: 75px;
+}
+
+.relogio div , h1{
+    font-size: 100px;
+    font-family: clock;
+}
+
+.darkmode{
+    background: url('/css/space.jpg');
+    background-size: cover;
+
+}
+
+.mensagem{
+    position: absolute;
+    width: auto;
+    bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mensagem p{
+    font-size: 40px;
+    display: flex;
+}
+
+.blink{
+    animation: blink 2000ms steps(1, end) infinite;
+}
+
+@keyframes blink{
+
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+
+}
